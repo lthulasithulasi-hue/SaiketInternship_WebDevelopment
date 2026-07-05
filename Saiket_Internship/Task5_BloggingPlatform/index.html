@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogging Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>My Blogging Platform</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="blog-form">
+            <h2>Create / Edit Blog Post</h2>
+
+            <input type="text" id="title" placeholder="Enter Blog Title">
+
+            <textarea id="content" rows="8"
+                placeholder="Write your blog content here..."></textarea>
+
+            <button onclick="savePost()">Publish Post</button>
+        </div>
+
+        <div class="blog-posts">
+            <h2>Published Posts</h2>
+            <div id="posts"></div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f4f4f4;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+            padding:20px;
+        }
+
+        .form-container{
+            background:#fff;
+            width:100%;
+            max-width:600px;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h2{
+            text-align:center;
+            margin-bottom:20px;
+        }
+
+        .form-group{
+            margin-bottom:15px;
+        }
+
+        label{
+            display:block;
+            margin-bottom:5px;
+            font-weight:bold;
+        }
+
+        input,
+        select,
+        textarea{
+            width:100%;
+            padding:10px;
+            border:1px solid #ccc;
+            border-radius:5px;
+        }
+
+        .radio-group,
+        .checkbox-group{
+            margin-top:8px;
+        }
+
+        .radio-group label,
+        .checkbox-group label{
+            display:inline-block;
+            margin-right:15px;
+            font-weight:normal;
+        }
+
+        .radio-group input,
+        .checkbox-group input{
+            width:auto;
+            margin-right:5px;
+        }
+
+        .buttons{
+            display:flex;
+            gap:10px;
+        }
+
+        button{
+            flex:1;
+            padding:12px;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        .submit-btn{
+            background:#28a745;
+            color:white;
+        }
+
+        .reset-btn{
+            background:#dc3545;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+
+        <h2>Contact Form</h2>
+
+        <form>
+
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    pattern="[0-9]{10}"
+                    placeholder="10-digit phone number"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label>Gender</label>
+
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="gender" required>
+                        Male
+                    </label>
+
+                    <label>
+                        <input type="radio" name="gender">
+                        Female
+                    </label>
+
+                    <label>
+                        <input type="radio" name="gender">
+                        Other
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Interests</label>
+
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" name="interest">
+                        Web Development
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="interest">
+                        Graphic Design
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="interest">
+                        Digital Marketing
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country</label>
+
+                <select id="country" required>
+                    <option value="">Select Country</option>
+                    <option>India</option>
+                    <option>United States</option>
+                    <option>United Kingdom</option>
+                    <option>Canada</option>
+                    <option>Australia</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+
+                <textarea
+                    id="message"
+                    rows="5"
+                    placeholder="Enter your message"
+                    required></textarea>
+            </div>
+
+            <div class="buttons">
+                <button type="submit" class="submit-btn">
+                    Submit
+                </button>
+
+                <button type="reset" class="reset-btn">
+                    Reset
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
